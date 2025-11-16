@@ -20,33 +20,169 @@
 <!-- Main css -->
 <link rel="stylesheet" href="css/style.css">
 <style>
-     .button1 {
-       width: 50px;
-       border-radius: 5px;
-       float: right;
-       }
-       table.type06 {
-  border-collapse: collapse;
-  text-align: left;
-  line-height: 1.5;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  margin: 20px 10px;
-}
-table.type06 th {
-  width: 150px;
-  padding: 10px;
-  font-weight: bold;
-  vertical-align: top;
-}
-table.type06 td {
-  width: 1000px;
-  padding: 10px;
-  vertical-align: top;
-}
-table.type06 .even {
-  background: #efefef;
-}
+     /* Modern Button Styles */
+     .github-btn {
+       display: inline-flex;
+       align-items: center;
+       gap: 8px;
+       background: linear-gradient(135deg, #24292e 0%, #000000 100%);
+       border: none;
+       border-radius: 8px;
+       color: #ffffff;
+       padding: 12px 24px;
+       font-size: 14px;
+       font-weight: 500;
+       text-decoration: none;
+       transition: all 0.3s ease;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+       margin-top: 20px;
+     }
+
+     .github-btn:hover {
+       transform: translateY(-2px);
+       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+       color: #ffffff;
+     }
+
+     .github-btn i {
+       font-size: 20px;
+     }
+
+     /* Modern Table Styles */
+     .project-info-table {
+       width: 100%;
+       border-radius: 12px;
+       overflow: hidden;
+       box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+       margin: 30px 0;
+       background: #ffffff;
+     }
+
+     .project-info-table tr {
+       border-bottom: 1px solid #f0f0f0;
+     }
+
+     .project-info-table tr:last-child {
+       border-bottom: none;
+     }
+
+     .project-info-table th {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: #ffffff;
+       padding: 16px 20px;
+       font-weight: 600;
+       text-align: left;
+       width: 180px;
+       font-size: 15px;
+     }
+
+     .project-info-table td {
+       padding: 16px 20px;
+       color: #575757;
+       line-height: 1.8;
+       background: #ffffff;
+     }
+
+     .project-info-table tr:nth-child(even) td {
+       background: #f8f9fa;
+     }
+
+     /* Skills Badge Styles */
+     .skills-container {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+       gap: 15px;
+       margin-top: 20px;
+     }
+
+     .skill-badge {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       padding: 20px 15px;
+       background: #ffffff;
+       border-radius: 12px;
+       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+       transition: all 0.3s ease;
+       text-decoration: none;
+       border: 2px solid transparent;
+     }
+
+     .skill-badge:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+       border-color: #667eea;
+     }
+
+     .skill-badge img {
+       width: 60px;
+       height: 60px;
+       object-fit: contain;
+       margin-bottom: 10px;
+     }
+
+     .skill-badge span {
+       font-size: 12px;
+       font-weight: 600;
+       color: #575757;
+       text-align: center;
+     }
+
+     /* Project Card Enhancement */
+     .project-section {
+       margin-bottom: 60px;
+       padding: 40px 0;
+     }
+
+     .project-header {
+       text-align: center;
+       margin-bottom: 40px;
+       padding-bottom: 20px;
+       border-bottom: 3px solid #f0f0f0;
+     }
+
+     .project-header h2 {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       background-clip: text;
+       font-weight: 600;
+       margin-bottom: 15px;
+     }
+
+     .experience-box {
+       background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+       padding: 30px;
+       border-radius: 15px;
+       margin-top: 40px;
+       box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+     }
+
+     .experience-box h2 {
+       color: #2d3748;
+       font-weight: 600;
+       margin-bottom: 20px;
+     }
+
+     .experience-box p {
+       color: #4a5568;
+       line-height: 1.8;
+     }
+
+     /* Contact Icons */
+     .contact-info {
+       display: flex;
+       align-items: center;
+       gap: 10px;
+       margin: 5px 0;
+       font-size: 16px;
+     }
+
+     .contact-info i {
+       color: #667eea;
+       font-size: 20px;
+     }
    </style>
 
 </head>
@@ -99,14 +235,14 @@ table.type06 .even {
 
                <div class="col-md-8 col-sm-8">
                     <h1 class="wow fadeInUp" data-wow-delay="0.6s">웹개발자 전광수 입니다.</h1>
-                    <div class="fa-icon">
+                    <div class="wow fadeInUp contact-info" data-wow-delay="0.8s">
                          <i class="fa fa-phone" aria-hidden="true"></i>
-                       </div>
-                       +82 010 3835 9854
-                       <div class="fa-icon">
+                         <span>+82 010 3835 9854</span>
+                    </div>
+                    <div class="wow fadeInUp contact-info" data-wow-delay="1.0s">
                          <i class="fa fa-at" aria-hidden="true"></i>
-                       </div>
-                      jgsjss9854@naver.com
+                         <span>jgsjss9854@naver.com</span>
+                    </div>
                </div>
                
 
@@ -144,55 +280,67 @@ table.type06 .even {
                          <h2>Skills and Tools</h2>
                     </div>
 
-                    <div class="wow fadeInUp" data-wow-delay="0.6s">
-                         <a href="#">
-                         <img src="images/123-removebg-preview.png" class="img-responsive" alt="js-css-html">
-                         </a>
-                         <a href="#">
-                         <img src="images/java-logo-removebg-preview.png" class="img-responsive" alt="java">
-                    </a>
-                    <a href="#">
-                         <img src="images/jquery.png" class="img-responsive" alt="instagram image">
-                    </a>
-                    <a href="#">
-                         <img src="images/ajax-removebg-preview.png" class="img-responsive" alt="instagram image">
-                    </a>
-                         <a href="#">
-                         <img src="images/mariadb-removebg-preview.png" class="img-responsive" alt="mariadb">
-                    </a>
-                         <a href="#">
-                         <img src="images/mysql-removebg-preview.png" class="img-responsive" alt="mysql">
-                    </a>
-                    <a href="#">
-                         <img src="images/JSP-removebg-preview.png" class="img-responsive" alt="instagram image">
-                    </a>
-                         <a href="#">
-                         <img src="images/aws1-removebg-preview.png" class="img-responsive" alt="aws">
-                    </a>
-                         <a href="#">
-                         <img src="images/git-removebg-preview.png" class="img-responsive" alt="git">
-                    </a>
-                         <a href="#">
-                         <img src="images/tomcat-removebg-preview.png" class="img-responsive" alt="tomcat">
-                    </a>
-                         <a href="#">
-                         <img src="images/eclipse-removebg-preview.png" class="img-responsive" alt="eclipse">
-                    </a>
-                         <a href="#">
-                         <img src="images/vscode-removebg-preview.png" class="img-responsive" alt="vsc">
-                    </a>
-                         <a href="#">
-                         <img src="images/intellij-removebg-preview.png" class="img-responsive" alt="intellij">
-                    </a>
-                         <a href="#">
-                         <img src="images/springboot-removebg-preview.png" class="img-responsive" alt="instagram image">
-                    </a>
-                         <a href="#">
-                         <img src="images/thymeleaf-removebg-preview.png" class="img-responsive" alt="instagram image">
-                    </a>
-                       
-                    
-                         
+                    <div class="wow fadeInUp skills-container" data-wow-delay="0.6s">
+                         <div class="skill-badge">
+                              <img src="images/123-removebg-preview.png" alt="HTML/CSS/JS">
+                              <span>HTML/CSS/JS</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/java-logo-removebg-preview.png" alt="Java">
+                              <span>Java</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/jquery.png" alt="jQuery">
+                              <span>jQuery</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/ajax-removebg-preview.png" alt="Ajax">
+                              <span>Ajax</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/mariadb-removebg-preview.png" alt="MariaDB">
+                              <span>MariaDB</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/mysql-removebg-preview.png" alt="MySQL">
+                              <span>MySQL</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/JSP-removebg-preview.png" alt="JSP">
+                              <span>JSP</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/aws1-removebg-preview.png" alt="AWS">
+                              <span>AWS</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/git-removebg-preview.png" alt="Git">
+                              <span>Git</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/tomcat-removebg-preview.png" alt="Tomcat">
+                              <span>Tomcat</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/eclipse-removebg-preview.png" alt="Eclipse">
+                              <span>Eclipse</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/vscode-removebg-preview.png" alt="VS Code">
+                              <span>VS Code</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/intellij-removebg-preview.png" alt="IntelliJ">
+                              <span>IntelliJ</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/springboot-removebg-preview.png" alt="Spring Boot">
+                              <span>Spring Boot</span>
+                         </div>
+                         <div class="skill-badge">
+                              <img src="images/thymeleaf-removebg-preview.png" alt="Thymeleaf">
+                              <span>Thymeleaf</span>
+                         </div>
                     </div>
                </div>
 
@@ -207,12 +355,12 @@ table.type06 .even {
      <div class="container">
           <!-- FirstProject -->
 
-          <div class="row">
+          <div class="row project-section">
 
                <div class="col-md-12 col-sm-12">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                        <strong> <h2>First Project</h2></strong>
-                         <p>첫 번째 미니 프로젝트-자바와 이클립스를 이용한 운동화 쇼핑몰</p>
+                    <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                        <h2>First Project</h2>
+                         <p>첫 번째 미니 프로젝트 - 자바와 이클립스를 이용한 운동화 쇼핑몰</p>
                     </div>
                </div>
 
@@ -270,20 +418,21 @@ table.type06 .even {
                </div>
                
           </div>
-               <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                    <h2>experience</h2>
-                    <p> 프로젝트 시작부터 종료 기간은 5일, 처음으로 스스로 기획하고 직접 코딩한 결과물 입니다. 원래 계획은 이후 장바구니 기능을 만들고, 비슷하게나마 결제진행도 작성하려 했으나 기간 내에 완성하지 못했습니다. 처음 하루는 어떻게 시작해야할지 조차 몰라서 시간을 허비했으며, 뒤늦게 가닥을 잡으며 진행했으나 많이 부족한 결과물입니다. 하지만 제 스스로 만든 최초의 결과물이며, 많은 것을 느끼게 해준 프로젝트 입니다.</p> 
-                    <a href="https://github.com/jgsjss/firstProject.git" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
+               <div class="wow fadeInUp experience-box" data-wow-delay="0.2s">
+                    <h2>💡 Experience</h2>
+                    <p>프로젝트 시작부터 종료 기간은 5일, 처음으로 스스로 기획하고 직접 코딩한 결과물 입니다. 원래 계획은 이후 장바구니 기능을 만들고, 비슷하게나마 결제진행도 작성하려 했으나 기간 내에 완성하지 못했습니다. 처음 하루는 어떻게 시작해야할지 조차 몰라서 시간을 허비했으며, 뒤늦게 가닥을 잡으며 진행했으나 많이 부족한 결과물입니다. 하지만 제 스스로 만든 최초의 결과물이며, 많은 것을 느끼게 해준 프로젝트 입니다.</p>
+                    <a href="https://github.com/jgsjss/firstProject.git" target="_blank" class="github-btn">
+                         <i class="fab fa-github"></i>
+                         <span>GitHub 저장소</span>
+                    </a>
                </div>
           <!-- SecondProject -->
-          <p></p>
-          </p>
-          <div class="row">
+          <div class="row project-section">
 
                <div class="col-md-12 col-sm-12">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                       <strong>  <h2>Second Project</h2></strong>
-                         <p>두 번째 미니 프로젝트-마크업 언어(HTML, CSS, JavaScript)를 활용한 웹디자인</p>
+                    <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                         <h2>Second Project</h2>
+                         <p>두 번째 미니 프로젝트 - 마크업 언어(HTML, CSS, JavaScript)를 활용한 웹디자인</p>
                     </div>
                </div>
 
@@ -327,22 +476,23 @@ table.type06 .even {
                </div>
 
                <div class="col-md-12 col-sm-12">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <h2>experience</h2>
-                         <p>백엔드 위주의 스킬을 익혔지만 웹개발에서 필수인 마크업 언어들을 기본적으로 알아야 했기에 배움의 기간과 깊이는 짧고 얕지만 능력껏 디자인을 했습니다. 기간은 1일. 매우 부족한 결과물이기에 포트폴리오 등록을 망설였으나, 후일 이 결과물을 보며 더욱 열심히, 잘 배워서 좋은 결과물을 만들어야겠단 결심을 할 수 있도록 등록했습니다.</p> 
-                         <a href="https://jgsjss.github.io/secprojectDucati/#" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
+                    <div class="wow fadeInUp experience-box" data-wow-delay="0.2s">
+                         <h2>💡 Experience</h2>
+                         <p>백엔드 위주의 스킬을 익혔지만 웹개발에서 필수인 마크업 언어들을 기본적으로 알아야 했기에 배움의 기간과 깊이는 짧고 얕지만 능력껏 디자인을 했습니다. 기간은 1일. 매우 부족한 결과물이기에 포트폴리오 등록을 망설였으나, 후일 이 결과물을 보며 더욱 열심히, 잘 배워서 좋은 결과물을 만들어야겠단 결심을 할 수 있도록 등록했습니다.</p>
+                         <a href="https://jgsjss.github.io/secprojectDucati/#" target="_blank" class="github-btn">
+                              <i class="fab fa-github"></i>
+                              <span>데모 보기</span>
+                         </a>
                     </div>
                </div>
           </div>
           <!-- ThirdProject -->
-          <p></p>
-          <p></p>
-          <div class="row">
+          <div class="row project-section">
 
                <div class="col-md-12 col-sm-12">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                         <strong><h2>Third Project</h2></strong>
-                         <p>세 번째 종합 프로젝트-스프링부트를 이용한 웹사이트 구축</p>
+                    <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                         <h2>Third Project</h2>
+                         <p>세 번째 종합 프로젝트 - 스프링부트를 이용한 웹사이트 구축</p>
                          <p>스프링을 기반으로 프레임워크인 스프링 부트를 이용하였으며, 관계형 데이터베이스인 마리아DB를 채택하였고, Spring Data JPA기반 엔티티 설계로 데이터베이스와 연동하였으며, MVC 모델 패턴으로 
                               컨트롤러와 서비스, DTO계층과 뷰페이지 등을 구현 하였습니다. 템플릿 엔진으로는 Thymeleaf를 채택하였습니다. 개발 도구는 인텔리제이를 이용하였고, 무중단 배포 서비스는 AWS에서 프리티어인 EC2서버와 RDS 를 이용하였습니다.</p>
                               <p><strong>아마존 웹 서비스의 EC2서버와 RDS를 이용한 호스팅 주소입니다. <a href="http://15.165.192.98:8081/" target="blank">http://15.165.192.98:8081/</a></strong></p>    
@@ -350,16 +500,16 @@ table.type06 .even {
                </div>
                <div class="col-xs-12" style="text-align: center;">
                     
-                    <br><br><br>
-                    <P><strong>추진 체계</strong></P>
-                    <table class="type06">
+                    <br><br>
+                    <P><strong>📋 추진 체계</strong></P>
+                    <table class="project-info-table">
                       <tr>
                         <th scope="row">프로젝트명</th>
                         <td>부산 맛집 어디GO? (bmj Where?)</td>
                       </tr>
                       <tr>
-                        <th scope="row" class="even">프로젝트 개요 및 설명</th>
-                        <td class="even">이 프로젝트는 부산 맛집 종합 정보 서비스’를 제공하는 사이트입니다. 
+                        <th scope="row">프로젝트 개요 및 설명</th>
+                        <td>이 프로젝트는 부산 맛집 종합 정보 서비스'를 제공하는 사이트입니다. 
                           부산에 익숙지 못한 부산 시민 및 관광객들이 지역별, 메뉴 분류별로 원하는 음식점에 대한 정보를 쉽게 구할 수 있을 뿐만 아니라 
                           ‘맛집 조회’ 화면에서 리뷰와 평점 기능을 통해 실제 고객의 수요를 파악할 수 있으며, 
                           각종 음식점과 제휴를 맺고 있어 이 사이트에 가입한 회원들에게만 할인쿠폰을 발급하여 우리 사이트에 회원으로 가입을 유도하는 사이트입니다.</td>
@@ -369,16 +519,16 @@ table.type06 .even {
                            <td>4인 참여 프로젝트, 2021년 10월 12일~ 2021년 10월 22일까지 약 2주간 진행.</td>
                       </tr>
                       <tr>
-                        <th scope="row" class="even">필요성</th>
-                        <td class="even">타지역에서 온 관광객 및 미식에 관심있는 사람들에게 부산 지역 주민들이 선정한 맛집 소개 및 알뜰한 할인정보 안내</td>
+                        <th scope="row">필요성</th>
+                        <td>타지역에서 온 관광객 및 미식에 관심있는 사람들에게 부산 지역 주민들이 선정한 맛집 소개 및 알뜰한 할인정보 안내</td>
                       </tr>
                       <tr>
                         <th scope="row" >강점</th>
                         <td >부산에 익숙지 못한 부산 시민 및 관광객들이 맛집에 대한 정보를 쉽게 구할 수 있고, 리뷰와 평점을 통해 실제 고객의 이용담을 엿볼수 있음.</th>
                       </tr>
                       <tr>
-                        <th scope="row" class="even">차별성</th>
-                        <td class="even">시각적으로 인기 맛집들이 한눈에 쏙 들어오는 웹페이지 구성
+                        <th scope="row">차별성</th>
+                        <td>시각적으로 인기 맛집들이 한눈에 쏙 들어오는 웹페이지 구성
                           등록된 여러 식당글과의 프로모션으로 회원 한정으로 맛집 할인권 쿠폰 발매
                           회원가입을 유도함으로서 사이트의 인지도를 높이고, 더욱 더 많은 식당들의 광고 및 프로모션을 만들어 냄으로서 수익 창출</td>
                       </tr>
@@ -388,8 +538,8 @@ table.type06 .even {
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row" class="even">극복 방법</th>
-                        <td class="even">다른 조원들과의 커뮤니케이션과 역할 분담을 통하여 체계적인 프로젝트 진행 과정이 되도록 노력하고, 개인 학습을 통하여 기능구현에 문제가 없도록 노력할 것.</td>
+                        <th scope="row">극복 방법</th>
+                        <td>다른 조원들과의 커뮤니케이션과 역할 분담을 통하여 체계적인 프로젝트 진행 과정이 되도록 노력하고, 개인 학습을 통하여 기능구현에 문제가 없도록 노력할 것.</td>
                       </tr>
                       <tr>
                         <th scope="row" >개발환경 및 도구</th>
@@ -562,25 +712,26 @@ table.type06 .even {
                     </div>
                     <div class="col-md-12 col-sm-12">
                          <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <h2>체크리스트</h2>
-                              <p>체크리스트 입니다. 테스트 기간은 2일이며 배운대로 라면 개발기간 만큼의 테스트기간을 거쳐야 한다고 배웠으나, 일정 상 2일간 테스트를 진행했습니다.</p>
-                              <img src="images/체크리스트.JPG" style="width: 100%;">
+                              <h2>✅ 체크리스트</h2>
+                              <p>테스트 기간은 2일이며 배운대로 라면 개발기간 만큼의 테스트기간을 거쳐야 한다고 배웠으나, 일정 상 2일간 테스트를 진행했습니다.</p>
+                              <img src="images/체크리스트.JPG" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-top: 20px;">
                          </div>
-                    
-                         <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <h2>experience</h2>
-                              <p>약 2주간의 프로젝트 개발기간과, 2일간의 테스트 기간을 거쳐 최초로 팀 프로젝트 라는것을 진행했습니다. 스프링부트에 대한 이해부족, 더 나아가 자바와 객체지향 개발, JPA라는 데이터베이스와 객체간의 접근기술 등 부족함과 배울점을 많이 느꼈으며, 팀원들과의 의사소통 또한 무척 중요하며, 형상관리 프로그램을 왜 사용하는지를 느꼈습니다. 그리고 더 나아가, 스프링부트를 배우는 것 또한 중요하지만, 제대로 배우지 못한 스프링, 그 전에 JSP와 Servlet, 그리고 제가 배운 웹개발 스킬의 근본이 되는 JAVA에 대한 심도깊은 학습과 이해가 필요하다고 느꼈습니다. 많은 시행착오를 거치며 수정과 보안을 했으나, 
-                                   부족하고 결함있는 결과물을 보고 있으니 수업시간에 더 열심히 공부하지 않았던 날들이 후회되는 순간이었습니다. 더욱 노력하고 배워서 기획했던 대로의 결과물이 나오도록 열심히 공부해야겠다고 느꼈습니다. </p> 
-                              <a href="https://github.com/jgsjss/bmjWhere.git" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
-                              &nbsp;&nbsp;
+
+                         <div class="wow fadeInUp experience-box" data-wow-delay="0.2s">
+                              <h2>💡 Experience</h2>
+                              <p>약 2주간의 프로젝트 개발기간과, 2일간의 테스트 기간을 거쳐 최초로 팀 프로젝트 라는것을 진행했습니다. 스프링부트에 대한 이해부족, 더 나아가 자바와 객체지향 개발, JPA라는 데이터베이스와 객체간의 접근기술 등 부족함과 배울점을 많이 느꼈으며, 팀원들과의 의사소통 또한 무척 중요하며, 형상관리 프로그램을 왜 사용하는지를 느꼈습니다. 그리고 더 나아가, 스프링부트를 배우는 것 또한 중요하지만, 제대로 배우지 못한 스프링, 그 전에 JSP와 Servlet, 그리고 제가 배운 웹개발 스킬의 근본이 되는 JAVA에 대한 심도깊은 학습과 이해가 필요하다고 느꼈습니다. 많은 시행착오를 거치며 수정과 보안을 했으나, 부족하고 결함있는 결과물을 보고 있으니 수업시간에 더 열심히 공부하지 않았던 날들이 후회되는 순간이었습니다. 더욱 노력하고 배워서 기획했던 대로의 결과물이 나오도록 열심히 공부해야겠다고 느꼈습니다.</p>
+                              <a href="https://github.com/jgsjss/bmjWhere.git" target="_blank" class="github-btn">
+                                   <i class="fab fa-github"></i>
+                                   <span>GitHub 저장소</span>
+                              </a>
                          </div>
                     </div>     
 
-                         <div class="row">
+                         <div class="row project-section">
 
                               <div class="col-md-12 col-sm-12">
-                                   <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                        <strong><h2>Toy Project1</h2></strong>
+                                   <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                                        <h2>Toy Project 1</h2>
                                         <p>학원과정이 끝난 후 자바스크립트로 Node 런타임에서 서버와 Vue.js 를 이용한 토이 프로젝트들 입니다.</p>
                                         <p>업무를 위해 해당 언어 및 프레임워크를 배우면서 개발했습니다.</p>
                                         <p>Vue.js 프론트앤드 토이 프로젝트 입니다. 부동산 웹페이지를 디자인 했습니다. </p>
@@ -621,16 +772,19 @@ table.type06 .even {
                                         <a href="images/vudongsan4.png" class="image-popup">
                                              <img src="images/vudongsan4.png" class="img-responsive" alt="Work">
                                    </div>
-                                   <h4>해당 프로젝트에선 Vue.js의 컴포넌트 구조와 props 사용법, 이벤트 핸들러 문법을 습득했습니다. </h4>
-                                   <a href="https://jgsjss.github.io/vudongsan/" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
+                                   <h4>해당 프로젝트에선 Vue.js의 컴포넌트 구조와 props 사용법, 이벤트 핸들러 문법을 습득했습니다.</h4>
+                                   <a href="https://jgsjss.github.io/vudongsan/" target="_blank" class="github-btn">
+                                        <i class="fab fa-github"></i>
+                                        <span>데모 보기</span>
+                                   </a>
                               </div>
                          </div>
 
-                         <div class="row">
+                         <div class="row project-section">
 
                               <div class="col-md-12 col-sm-12">
-                                   <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                        <strong><h2>Toy Project2</h2></strong>
+                                   <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                                        <h2>Toy Project 2</h2>
                                         <p>2번째 Vue 프로젝트 입니다.</p>
                                         <p>간단한 블로그 디자인을 코딩했으며 라우터 관련한 기능 위주로 습득하며 코딩했습니다.</p>
                                    </div>
@@ -670,16 +824,19 @@ table.type06 .even {
                                         <a href="images/blog4.png" class="image-popup">
                                              <img src="images/blog4.png" class="img-responsive" alt="Work">
                                    </div>
-                                   <h4>해당 프로젝트에선 Vue.js의 라우터 사용법 위주로 학습하였습니다. </h4>
-                                   <a href="https://jgsjss.github.io/" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
+                                   <h4>해당 프로젝트에선 Vue.js의 라우터 사용법 위주로 학습하였습니다.</h4>
+                                   <a href="https://jgsjss.github.io/" target="_blank" class="github-btn">
+                                        <i class="fab fa-github"></i>
+                                        <span>데모 보기</span>
+                                   </a>
                               </div>
                          </div>
 
-                         <div class="row">
+                         <div class="row project-section">
 
                               <div class="col-md-12 col-sm-12">
-                                   <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                        <strong><h2>Toy Project3</h2></strong>
+                                   <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                                        <h2>Toy Project 3</h2>
                                         <p>3번째 Vue 프로젝트 입니다.</p>
                                         <p>인스타그램을 카피하여 디자인한 프론트앤드 프로젝트 입니다.</p>
                                    </div>
@@ -717,16 +874,19 @@ table.type06 .even {
                                         <a href="images/stargram4.png" class="image-popup">
                                              <img src="images/stargram4.png" class="img-responsive" alt="Work">
                                    </div>
-                                   <h4>발행버튼을 누르면 사진과 글이 업로드 됩니다. 해당 프로젝트에선 Vuex 및 여러 Vue 문법을 학습하고 사용했습니다.  </h4>
-                                   <a href="https://jgsjss.github.io/stargram/" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
+                                   <h4>발행버튼을 누르면 사진과 글이 업로드 됩니다. 해당 프로젝트에선 Vuex 및 여러 Vue 문법을 학습하고 사용했습니다.</h4>
+                                   <a href="https://jgsjss.github.io/stargram/" target="_blank" class="github-btn">
+                                        <i class="fab fa-github"></i>
+                                        <span>데모 보기</span>
+                                   </a>
                               </div>
                          </div>
 
-                         <div class="row">
+                         <div class="row project-section">
 
                               <div class="col-md-12 col-sm-12">
-                                   <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                        <strong><h2>Toy Project4</h2></strong>
+                                   <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                                        <h2>Toy Project 4</h2>
                                         <p>Node 환경에서 express 라이브러리를 이용한 서버구축, ejs 템플릿 엔진을 이용한 TodoApp 프로젝트 입니다.</p>
                                         <p>웹사이트 기능구현에 대한 설명입니다. 동영상 참고 부탁드립니다.</p>
                                         <iframe width="100%" height="500" src="https://www.youtube.com/embed/uQXyAa9aKa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -739,14 +899,13 @@ table.type06 .even {
                               <h4>쿼리스트링으로 get요청을 통하여 검색기능을 구현했으며, 몽고DB에서 검색효율을 위한 인덱싱 설정을 해뒀습니다.</h4>
                               <h4>글 작성 후, 본인이 작성한 글이 아닐시에 글 수정 및 삭제에 대한 것도 제한이 됩니다.</h4>
                               <h4>TodoApp 으로 시작했으나, 블로그 형태로 해도 되겠다는 생각을 했으며, 현재 multer 라이브러리를 이용하여 이미지 업로드 코딩을 진행중입니다.</h4>
-                              <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                   <h2>experience</h2>
-                                   <p>시작은 자바, 스프링부트였지만 회사에서 필요로 하는 업무능력이 자바스크립트 기반의 개발이었기에, 직장생활을 하며 정신없이 배우며 실무에 투입되었습니다. 처음엔 적응하지 못하여 많이 헤메었으나
-                                        퇴근 후, 그리고 휴일에도 회사 업무에 도움이 되도록 개인적인 학습 및 노력을 기울였고, 회사 선배들에게 짧은 기간임에도 잘 따라왔다는 인정을 받으며 매우 즐거웠습니다. 그리고 여전히 css 관련된
-                                   프론트앤드 부분은 매우 어렵지만, Vue.js에 대해 공부하면서 프론트앤드에 대한 이해와 관심도가 매우 커졌으며, 역량만 된다면 React.js, 그리고 css 관련 공부를 더 하고싶다는 생각이 들었습니다. 늦게 시작한
-                              만큼 절실함과 욕심을 가지고, 더욱 노력해야겠다는 생각이 들었습니다. </p> 
-                                   <a href="https://github.com/jgsjss/TODOAPP.git" target="blank"> <button class="button1" type="button"><i class="fab fa-github fa-3x" style="color: black;"></i></button></a>
-                                   &nbsp;&nbsp;
+                              <div class="wow fadeInUp experience-box" data-wow-delay="0.2s">
+                                   <h2>💡 Experience</h2>
+                                   <p>시작은 자바, 스프링부트였지만 회사에서 필요로 하는 업무능력이 자바스크립트 기반의 개발이었기에, 직장생활을 하며 정신없이 배우며 실무에 투입되었습니다. 처음엔 적응하지 못하여 많이 헤메었으나 퇴근 후, 그리고 휴일에도 회사 업무에 도움이 되도록 개인적인 학습 및 노력을 기울였고, 회사 선배들에게 짧은 기간임에도 잘 따라왔다는 인정을 받으며 매우 즐거웠습니다. 그리고 여전히 css 관련된 프론트앤드 부분은 매우 어렵지만, Vue.js에 대해 공부하면서 프론트앤드에 대한 이해와 관심도가 매우 커졌으며, 역량만 된다면 React.js, 그리고 css 관련 공부를 더 하고싶다는 생각이 들었습니다. 늦게 시작한 만큼 절실함과 욕심을 가지고, 더욱 노력해야겠다는 생각이 들었습니다.</p>
+                                   <a href="https://github.com/jgsjss/TODOAPP.git" target="_blank" class="github-btn">
+                                        <i class="fab fa-github"></i>
+                                        <span>GitHub 저장소</span>
+                                   </a>
                               </div>
                                                        </div>
 
@@ -755,8 +914,8 @@ table.type06 .even {
                          </div>
 
                          <div class="col-md-12 col-sm-12">
-                              <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                                   <strong><h2>실제 운영 및 개발 홈페이지</h2></strong>
+                              <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
+                                   <h2>실제 운영 및 개발 홈페이지</h2>
                                    <p>1. 중랑구시설관리공단</p>
                                    <p><a href="https://www.jungnangimc.or.kr/">홈페이지 링크</p>
                                    <p>해당 시설관리공단의 회원관리, 대관예약 시스템 유지보수 및 기능고도화 등의 업무 담당</p>
