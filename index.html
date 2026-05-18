@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 
 <meta charset="UTF-8">
 
-<title>Portfolio</title>
+<title>전광수 | 웹 개발자 포트폴리오</title>
 
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta name="description" content="Personal Website Template">
-<meta name="keywords" content="Personal, Website Template, Minimal HTML Template, Freelancer">
-<meta name="author" content="khai tawng">
+<meta name="description" content="웹 개발자 전광수의 포트폴리오입니다. Java, Spring Boot, Vue.js, Node.js 기반 프로젝트를 소개합니다.">
+<meta name="keywords" content="웹개발자, 포트폴리오, Java, Spring Boot, Vue.js, Node.js, 전광수">
+<meta name="author" content="전광수">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -183,6 +183,73 @@
        color: #667eea;
        font-size: 20px;
      }
+
+     /* Real Work Cards */
+     .real-work-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+       gap: 20px;
+       margin-top: 10px;
+       margin-bottom: 40px;
+     }
+
+     .real-work-card {
+       border-radius: 12px;
+       overflow: hidden;
+       box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+       transition: all 0.3s ease;
+       border: 2px solid transparent;
+     }
+
+     .real-work-card:hover {
+       transform: translateY(-5px);
+       box-shadow: 0 8px 25px rgba(102,126,234,0.2);
+       border-color: rgba(102,126,234,0.3);
+     }
+
+     .real-work-card-header {
+       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+       color: #ffffff;
+       padding: 14px 18px;
+       font-weight: 600;
+       font-size: 15px;
+       font-family: 'Poppins', sans-serif;
+     }
+
+     .real-work-card-body {
+       background: #ffffff;
+       padding: 14px 18px;
+     }
+
+     .real-work-card-body p {
+       font-size: 14px;
+       color: #4a5568;
+       margin-bottom: 10px;
+     }
+
+     .real-work-link {
+       display: inline-block;
+       color: #667eea;
+       font-size: 13px;
+       font-weight: 500;
+       margin-right: 10px;
+       margin-bottom: 4px;
+       transition: color 0.3s ease;
+     }
+
+     .real-work-link:hover {
+       color: #764ba2;
+     }
+
+     /* Work description (image captions) */
+     .work-desc {
+       color: #4a5568;
+       font-size: 14px;
+       font-weight: 400;
+       line-height: 1.6;
+       margin-top: 10px;
+       margin-bottom: 0;
+     }
    </style>
 
 </head>
@@ -213,8 +280,8 @@
           <div class="collapse navbar-collapse">
                <ul class="nav navbar-nav navbar-right">
                     <li><a class="smoothScroll" href="#home">Home</a></li>
-                    <li><a class="smoothScroll" href="#about">About JK</a></li>
-                    <li><a class="smoothScroll" href="#work">My Projects</a></li>
+                    <li><a class="smoothScroll" href="#about">소개</a></li>
+                    <li><a class="smoothScroll" href="#work">프로젝트</a></li>
                     <li><a class="smoothScroll" href="#contact">Contact</a></li>
                </ul>
           </div>
@@ -243,6 +310,12 @@
                          <i class="fa fa-at" aria-hidden="true"></i>
                          <span>jgsjss9854@naver.com</span>
                     </div>
+                    <div class="wow fadeInUp" data-wow-delay="1.2s">
+                         <a href="https://github.com/jgsjss" target="_blank" class="github-btn" style="margin-top:24px;">
+                              <i class="fab fa-github"></i>
+                              <span>GitHub 프로필</span>
+                         </a>
+                    </div>
                </div>
                
 
@@ -260,17 +333,14 @@
                     <div class="about-thumb">
                          <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
                               <h2>전광수</h2>
-                              <p><strong>Birth : 87.07.06 </strong></p>
-                              <p><strong>출생 : 부산광역시 </strong></p>
-                              <p><strong>취미 : 장르불문 소설 읽기, 스쿠터 라이딩</strong></p>
-                              <p><strong>장점 : 경청을 잘함, 호기심 많음, 좋아하는 것에는 열정을 바쳐서 습득함.</strong></p>
-                              <p><strong>항상 겸손한 자세로 동료와 선배들의 조언에 귀 기울이고, 새로운 것을 배움에 두려워 하지 않으며 나아가겠습니다.</strong></p>
-                              <p><strong>늦게 시작한 만큼 남들보다 빠르지만 꼼꼼하게 익히며, 남들에게 내 직업은 개발자 라고 말할 수 있도록 노력하겠습니다.</strong></p>
-                              <p><strong>현재 공단을 대상으로 SI/SM 사업을 맡고있는 회사에서 회원관리시스템 유지보수 및 기능고도화, 신규개발건 등의 업무를 맡고있습니다.</strong></p>
-                              <p><strong>방송통신대학교 컴퓨터과학과에 23학번으로 입학 후, 현재 3학년 과정 재학중입니다.</strong></p>
-                         </div>
-                         <div class="wow fadeInUp" data-wow-delay="0.8s">
-                              <p> </p>
+                              <p><strong>Birth:</strong> 1987.07.06</p>
+                              <p><strong>출생:</strong> 부산광역시</p>
+                              <p><strong>취미:</strong> 장르불문 소설 읽기, 스쿠터 라이딩</p>
+                              <p><strong>장점:</strong> 경청을 잘함, 호기심 많음, 좋아하는 것에는 열정을 바쳐서 습득함.</p>
+                              <p>항상 겸손한 자세로 동료와 선배들의 조언에 귀 기울이고, 새로운 것을 배움에 두려워 하지 않으며 나아가겠습니다.</p>
+                              <p>늦게 시작한 만큼 남들보다 빠르지만 꼼꼼하게 익히며, 남들에게 내 직업은 개발자 라고 말할 수 있도록 노력하겠습니다.</p>
+                              <p>현재 공단을 대상으로 SI/SM 사업을 맡고있는 회사에서 회원관리시스템 유지보수 및 기능고도화, 신규개발건 등의 업무를 맡고있습니다.</p>
+                              <p>방송통신대학교 컴퓨터과학과에 23학번으로 입학 후, 현재 3학년 과정 재학중입니다.</p>
                          </div>
                     </div>
                </div>
@@ -371,7 +441,7 @@
                               <img src="images/자바이클립스.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>콘솔창에서 시행되는 프로그램-메인메소드 시행 시 회원가입 및 로그인 선택 메뉴 활성화</h4>
+                    <p class="work-desc">콘솔창에서 시행되는 프로그램-메인메소드 시행 시 회원가입 및 로그인 선택 메뉴 활성화</p>
                </div>
                
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
@@ -381,7 +451,7 @@
                               <img src="images/자바이클립스2.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>번호로 메뉴버튼을 선택하여 회원가입을 진행하며 아이디 중복검사 메소드를 통하여 중복확인</h4>
+                    <p class="work-desc">번호로 메뉴버튼을 선택하여 회원가입을 진행하며 아이디 중복검사 메소드를 통하여 중복확인</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
@@ -391,7 +461,7 @@
                               <img src="images/자바이클립스3.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>기존에 가입한 회원정보를 아이디와 비밀번호를 통한 확인 후 정보 변경 진행</h4>
+                    <p class="work-desc">기존에 가입한 회원정보를 아이디와 비밀번호를 통한 확인 후 정보 변경 진행</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
@@ -401,7 +471,7 @@
                               <img src="images/자바이클립스4.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>로그인 후 운동화 쇼핑 시작, 설정해 놓은 메소드를 통하여 브랜드,색상,사이즈를 랜덤하게 생성, 컬렉션에 저장하게함</h4>
+                    <p class="work-desc">로그인 후 운동화 쇼핑 시작, 설정해 놓은 메소드를 통하여 브랜드,색상,사이즈를 랜덤하게 생성, 컬렉션에 저장하게함</p>
                </div>
           </div>
           <div class="row">
@@ -414,7 +484,7 @@
                               <img src="images/자바이클립스5.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>숫자 입력으로 메뉴버튼을 선택하여 원하는 운동화를 찾고 재고를 확인 후 쇼핑 시작</h4>
+                    <p class="work-desc">숫자 입력으로 메뉴버튼을 선택하여 원하는 운동화를 찾고 재고를 확인 후 쇼핑 시작</p>
                </div>
                
           </div>
@@ -443,7 +513,7 @@
                               <img src="images/ducati1.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>평소 관심있는 바이크 브랜드를 주제로 홍보하는 정적 웹페이지 디자인 구현</h4>
+                    <p class="work-desc">평소 관심있는 바이크 브랜드를 주제로 홍보하는 정적 웹페이지 디자인 구현</p>
                </div>
                
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
@@ -453,7 +523,7 @@
                               <img src="images/ducati2.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>화면 슬라이드 기능 및 섹션 별 네비게이션 메뉴</h4>
+                    <p class="work-desc">화면 슬라이드 기능 및 섹션 별 네비게이션 메뉴</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
@@ -463,7 +533,6 @@
                               <img src="images/ducati3.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4></h4>
                </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
                     <!-- WORK THUMB -->
@@ -472,7 +541,6 @@
                               <img src="images/ducati4.jpg" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4></h4>
                </div>
 
                <div class="col-md-12 col-sm-12">
@@ -500,8 +568,7 @@
                </div>
                <div class="col-xs-12" style="text-align: center;">
                     
-                    <br><br>
-                    <P><strong>📋 추진 체계</strong></P>
+                    <p class="section-label"><strong>📋 추진 체계</strong></p>
                     <table class="project-info-table">
                       <tr>
                         <th scope="row">프로젝트명</th>
@@ -524,7 +591,7 @@
                       </tr>
                       <tr>
                         <th scope="row" >강점</th>
-                        <td >부산에 익숙지 못한 부산 시민 및 관광객들이 맛집에 대한 정보를 쉽게 구할 수 있고, 리뷰와 평점을 통해 실제 고객의 이용담을 엿볼수 있음.</th>
+                        <td>부산에 익숙지 못한 부산 시민 및 관광객들이 맛집에 대한 정보를 쉽게 구할 수 있고, 리뷰와 평점을 통해 실제 고객의 이용담을 엿볼수 있음.</td>
                       </tr>
                       <tr>
                         <th scope="row">차별성</th>
@@ -550,8 +617,6 @@
                    
                     <div class="col-md-12 col-sm-12">
                          <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                              <p></p>
-                              <p></p>
                               <h2>클래스 다이어그램</h2>
                          </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
@@ -561,8 +626,8 @@
                               <img src="images/BmjApplication.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>>BmjApplication 클래스 입니다. 메인메소드가 있으며, BaseEntity 클래스에 있는
-                         현재시간, 수정시간 자동 등록을 위한 @EnableJpaAuditing 어노테이션과 @SpringBootApplication 이 선언되었습니다</h4>
+                    <p class="work-desc">BmjApplication 클래스 입니다. 메인메소드가 있으며, BaseEntity 클래스에 있는
+                         현재시간, 수정시간 자동 등록을 위한 @EnableJpaAuditing 어노테이션과 @SpringBootApplication 이 선언되었습니다</p>
                </div>
                
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
@@ -572,7 +637,7 @@
                               <img src="images/entity.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Entity 클래스 입니다. DB의 테이블과 매칭시켜 서버 실행시 자동으로 테이블을 생성하게 합니다.</h4>
+                    <p class="work-desc">Entity 클래스 입니다. DB의 테이블과 매칭시켜 서버 실행시 자동으로 테이블을 생성하게 합니다.</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
@@ -582,7 +647,7 @@
                               <img src="images/UploadTestController.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Controller 클래스 입니다. 클라이언트로 요청받은 뷰페이지와 데이터를 반환합니다.</h4>
+                    <p class="work-desc">Controller 클래스 입니다. 클라이언트로 요청받은 뷰페이지와 데이터를 반환합니다.</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
@@ -592,7 +657,7 @@
                               <img src="images/repository.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Repository 인터페이스 입니다. JpaRepository를 상속받아 데이터베이스에 접근하는 기능을 구현합니다.</h4>
+                    <p class="work-desc">Repository 인터페이스 입니다. JpaRepository를 상속받아 데이터베이스에 접근하는 기능을 구현합니다.</p>
                </div>
           </div>
           <div class="row">
@@ -605,8 +670,8 @@
                               <img src="images/Package service.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Service 클래스 입니다. 컨트롤러에서 요청하는 여러가지 비즈니스 로직들을 처리하며, DTO 타입에서 Entity 타입으로, 혹은 반대로
-                         데이터 타입의 변환이 이루어집니다.</h4>
+                    <p class="work-desc">Service 클래스 입니다. 컨트롤러에서 요청하는 여러가지 비즈니스 로직들을 처리하며, DTO 타입에서 Entity 타입으로, 혹은 반대로
+                         데이터 타입의 변환이 이루어집니다.</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
@@ -616,7 +681,7 @@
                               <img src="images/DTOPackage.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>DTO 클래스 입니다. 위의 서비스 계층에서 발생하는 데이터 타입의 변환에서 그릇의 역할을 하는 클래스 들입니다.</h4>
+                    <p class="work-desc">DTO 클래스 입니다. 위의 서비스 계층에서 발생하는 데이터 타입의 변환에서 그릇의 역할을 하는 클래스 들입니다.</p>
                </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
                     <!-- WORK THUMB -->
@@ -625,8 +690,8 @@
                               <img src="images/security.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Security 관련 클래스 입니다.
-                         회원가입시 권한부여, 패스워드 인코딩, 로그인 기능 등 스프링 시큐리티5 라이브러리를 이용한 클래스 들입니다. </h4>
+                    <p class="work-desc">Security 관련 클래스 입니다.
+                         회원가입시 권한부여, 패스워드 인코딩, 로그인 기능 등 스프링 시큐리티5 라이브러리를 이용한 클래스 들입니다. </p>
                </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
                     <!-- WORK THUMB -->
@@ -635,7 +700,7 @@
                               <img src="images/Package config.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>Security Config 클래스 입니다. 권한부여 및 로그인, 로그아웃 설정 등을 하는 클래스 입니다.</h4>
+                    <p class="work-desc">Security Config 클래스 입니다. 권한부여 및 로그인, 로그아웃 설정 등을 하는 클래스 입니다.</p>
                </div>
                
           </div>
@@ -649,7 +714,7 @@
                               <img src="images/entityManagerFactory(EntityManagerFactoryBuilder).png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>EntityRelationshipDiagram (ERD) 입니다. 엔티티들 간의 관계를 그려놓은 이미지 입니다.</h4>
+                    <p class="work-desc">EntityRelationshipDiagram (ERD) 입니다. 엔티티들 간의 관계를 그려놓은 이미지 입니다.</p>
                </div>
 
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
@@ -659,7 +724,7 @@
                               <img src="images/유스케이스1.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>유스케이스 다이어그램입니다. 웹사이트 이용에 관하여 간단한 사용설명을 그렸습니다.</h4>
+                    <p class="work-desc">유스케이스 다이어그램입니다. 웹사이트 이용에 관하여 간단한 사용설명을 그렸습니다.</p>
                </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
                     <!-- WORK THUMB -->
@@ -668,7 +733,7 @@
                               <img src="images/aws2.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>aws의 ec2서버를 putty에서 리눅스 환경으로 구동한 부분입니다.</h4>
+                    <p class="work-desc">aws의 ec2서버를 putty에서 리눅스 환경으로 구동한 부분입니다.</p>
                </div>
                <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
                     <!-- WORK THUMB -->
@@ -677,12 +742,9 @@
                               <img src="images/aws3.png" class="img-responsive" alt="Work">
                          </a>
                     </div>
-                    <h4>배포 후 접속한 화면입니다. </h4>
+                    <p class="work-desc">배포 후 접속한 화면입니다. </p>
                </div>
           
-          <p></p>
-          <p></p>
-
           <div class="col-md-12 col-sm-12">
                <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
                     <h2>기능 구현 설명</h2>
@@ -745,7 +807,7 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>Vue.js로 각 컴포넌트를 제작하고, Props로 데이터 전송 및 바인딩을 하여 제작했습니다.</h4>
+                                   <p class="work-desc">Vue.js로 각 컴포넌트를 제작하고, Props로 데이터 전송 및 바인딩을 하여 제작했습니다.</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
                                    <!-- WORK THUMB -->
@@ -755,7 +817,7 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>사진 밑의 제목을 클릭하면 모달창이 나타나고, 상세설명과 선택한 개월수에 따라 월세가 계산됩니다.</h4>
+                                   <p class="work-desc">사진 밑의 제목을 클릭하면 모달창이 나타나고, 상세설명과 선택한 개월수에 따라 월세가 계산됩니다.</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
                                    <!-- WORK THUMB -->
@@ -765,14 +827,15 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>App.vue 파일에 만들어놓은 버튼으로 데이터의 정렬을 변경할 수 있습니다. </h4>
+                                   <p class="work-desc">App.vue 파일에 만들어놓은 버튼으로 데이터의 정렬을 변경할 수 있습니다. </p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="1.0s">
                                    <div class="work-thumb">
                                         <a href="images/vudongsan4.png" class="image-popup">
                                              <img src="images/vudongsan4.png" class="img-responsive" alt="Work">
+                                        </a>
                                    </div>
-                                   <h4>해당 프로젝트에선 Vue.js의 컴포넌트 구조와 props 사용법, 이벤트 핸들러 문법을 습득했습니다.</h4>
+                                   <p class="work-desc">해당 프로젝트에선 Vue.js의 컴포넌트 구조와 props 사용법, 이벤트 핸들러 문법을 습득했습니다.</p>
                                    <a href="https://jgsjss.github.io/vudongsan/" target="_blank" class="github-btn">
                                         <i class="fab fa-github"></i>
                                         <span>데모 보기</span>
@@ -797,7 +860,7 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>블로그 메인화면 입니다.</h4>
+                                   <p class="work-desc">블로그 메인화면 입니다.</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
                                    <!-- WORK THUMB -->
@@ -807,7 +870,7 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>네브바 메뉴에 따라 라우터로 화면전환이 됩니다.</h4>
+                                   <p class="work-desc">네브바 메뉴에 따라 라우터로 화면전환이 됩니다.</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
                                    <!-- WORK THUMB -->
@@ -817,14 +880,15 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>포스팅 게시판이며 각 게시글 제목에 라우터 링크가 처리되어 클릭시 상세페이지로 이동합니다. </h4>
+                                   <p class="work-desc">포스팅 게시판이며 각 게시글 제목에 라우터 링크가 처리되어 클릭시 상세페이지로 이동합니다. </p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="1.0s">
                                    <div class="work-thumb">
                                         <a href="images/blog4.png" class="image-popup">
                                              <img src="images/blog4.png" class="img-responsive" alt="Work">
+                                        </a>
                                    </div>
-                                   <h4>해당 프로젝트에선 Vue.js의 라우터 사용법 위주로 학습하였습니다.</h4>
+                                   <p class="work-desc">해당 프로젝트에선 Vue.js의 라우터 사용법 위주로 학습하였습니다.</p>
                                    <a href="https://jgsjss.github.io/" target="_blank" class="github-btn">
                                         <i class="fab fa-github"></i>
                                         <span>데모 보기</span>
@@ -848,7 +912,7 @@
                                              <img src="images/stargram1.png" class="img-responsive" alt="Work">
                                         </a>
                                    </div>
-                                   <h4>스타그램 메인화면입니다. 아랫쪽에 + 버튼을 클릭하면 사진 업로드 화면으로 전환됩니다.</h4>
+                                   <p class="work-desc">스타그램 메인화면입니다. 아랫쪽에 + 버튼을 클릭하면 사진 업로드 화면으로 전환됩니다.</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
                                    <!-- WORK THUMB -->
@@ -857,7 +921,7 @@
                                              <img src="images/stargram2.png" class="img-responsive" alt="Work">
                                         </a>
                                    </div>
-                                   <h4>업로드할 사진을 선택하면 사진 필터 선택창으로 이동합니다..</h4>
+                                   <p class="work-desc">업로드할 사진을 선택하면 사진 필터 선택창으로 이동합니다..</p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
                                    <!-- WORK THUMB -->
@@ -867,14 +931,15 @@
                                         </a>
                                         
                                    </div>
-                                   <h4>우측 상단의 next 버튼을 클릭하면 글작성 페이지로 이동합니다. </h4>
+                                   <p class="work-desc">우측 상단의 next 버튼을 클릭하면 글작성 페이지로 이동합니다. </p>
                               </div>
                               <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="1.0s">
                                    <div class="work-thumb">
                                         <a href="images/stargram4.png" class="image-popup">
                                              <img src="images/stargram4.png" class="img-responsive" alt="Work">
+                                        </a>
                                    </div>
-                                   <h4>발행버튼을 누르면 사진과 글이 업로드 됩니다. 해당 프로젝트에선 Vuex 및 여러 Vue 문법을 학습하고 사용했습니다.</h4>
+                                   <p class="work-desc">발행버튼을 누르면 사진과 글이 업로드 됩니다. 해당 프로젝트에선 Vuex 및 여러 Vue 문법을 학습하고 사용했습니다.</p>
                                    <a href="https://jgsjss.github.io/stargram/" target="_blank" class="github-btn">
                                         <i class="fab fa-github"></i>
                                         <span>데모 보기</span>
@@ -892,13 +957,13 @@
                                         <iframe width="100%" height="500" src="https://www.youtube.com/embed/uQXyAa9aKa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                    </div>
                               </div>
-                              <h4>NoSQL인 몽고DB와 연동하였으며, 다른 프론트앤드 프레임워크를 이용하지 않고, ejs 템플릿 엔진으로 프로젝트를 시작했습니다. </h4>
-                              <h4>디자인(프론트앤드적인 요소)들은 많이 부족하나, Node 환경에서의 자바스크립트 기능, 여러 npm 라이브러리 기능 및 문법의 학습을 위주로 진행했습니다.</h4>
-                              <h4>npm 라이브러리중 passport를 이용하여 세션을 통한 로그인 유지 및 인증 기능을 사용했습니다. 글 리스트와 글작성 페이지는 로그인 후 이용가능 하도록 제한을 걸었습니다.</h4>
-                              <h4>회원가입 시 여러 유효성 검사를 해야하나, 우선 ID 중복에 대한 부분을 ajax 요청으로 디비에서 확인 후, 중복시 가입이 안되며 페이지가 리다이렉트 됩니다.</h4>
-                              <h4>쿼리스트링으로 get요청을 통하여 검색기능을 구현했으며, 몽고DB에서 검색효율을 위한 인덱싱 설정을 해뒀습니다.</h4>
-                              <h4>글 작성 후, 본인이 작성한 글이 아닐시에 글 수정 및 삭제에 대한 것도 제한이 됩니다.</h4>
-                              <h4>TodoApp 으로 시작했으나, 블로그 형태로 해도 되겠다는 생각을 했으며, 현재 multer 라이브러리를 이용하여 이미지 업로드 코딩을 진행중입니다.</h4>
+                              <p class="work-desc">NoSQL인 몽고DB와 연동하였으며, 다른 프론트앤드 프레임워크를 이용하지 않고, ejs 템플릿 엔진으로 프로젝트를 시작했습니다. </p>
+                              <p class="work-desc">디자인(프론트앤드적인 요소)들은 많이 부족하나, Node 환경에서의 자바스크립트 기능, 여러 npm 라이브러리 기능 및 문법의 학습을 위주로 진행했습니다.</p>
+                              <p class="work-desc">npm 라이브러리중 passport를 이용하여 세션을 통한 로그인 유지 및 인증 기능을 사용했습니다. 글 리스트와 글작성 페이지는 로그인 후 이용가능 하도록 제한을 걸었습니다.</p>
+                              <p class="work-desc">회원가입 시 여러 유효성 검사를 해야하나, 우선 ID 중복에 대한 부분을 ajax 요청으로 디비에서 확인 후, 중복시 가입이 안되며 페이지가 리다이렉트 됩니다.</p>
+                              <p class="work-desc">쿼리스트링으로 get요청을 통하여 검색기능을 구현했으며, 몽고DB에서 검색효율을 위한 인덱싱 설정을 해뒀습니다.</p>
+                              <p class="work-desc">글 작성 후, 본인이 작성한 글이 아닐시에 글 수정 및 삭제에 대한 것도 제한이 됩니다.</p>
+                              <p class="work-desc">TodoApp 으로 시작했으나, 블로그 형태로 해도 되겠다는 생각을 했으며, 현재 multer 라이브러리를 이용하여 이미지 업로드 코딩을 진행중입니다.</p>
                               <div class="wow fadeInUp experience-box" data-wow-delay="0.2s">
                                    <h2>💡 Experience</h2>
                                    <p>시작은 자바, 스프링부트였지만 회사에서 필요로 하는 업무능력이 자바스크립트 기반의 개발이었기에, 직장생활을 하며 정신없이 배우며 실무에 투입되었습니다. 처음엔 적응하지 못하여 많이 헤메었으나 퇴근 후, 그리고 휴일에도 회사 업무에 도움이 되도록 개인적인 학습 및 노력을 기울였고, 회사 선배들에게 짧은 기간임에도 잘 따라왔다는 인정을 받으며 매우 즐거웠습니다. 그리고 여전히 css 관련된 프론트앤드 부분은 매우 어렵지만, Vue.js에 대해 공부하면서 프론트앤드에 대한 이해와 관심도가 매우 커졌으며, 역량만 된다면 React.js, 그리고 css 관련 공부를 더 하고싶다는 생각이 들었습니다. 늦게 시작한 만큼 절실함과 욕심을 가지고, 더욱 노력해야겠다는 생각이 들었습니다.</p>
@@ -916,29 +981,59 @@
                          <div class="col-md-12 col-sm-12">
                               <div class="wow fadeInUp project-header" data-wow-delay="0.2s">
                                    <h2>실제 운영 및 개발 홈페이지</h2>
-                                   <p>1. 중랑구시설관리공단</p>
-                                   <p><a href="https://www.jungnangimc.or.kr/">홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 유지보수 및 기능고도화 등의 업무 담당</p>
-                                   <br><br>
-                                   <p>2. 강서구시설관리공단</p>
-                                   <p><a href="https://www.gssi.or.kr/">대표 홈페이지 링크</p>
-                                   <p><a href="https://sport.gssi.or.kr/">체육시설 홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 유지보수 및 기능고도화 등의 업무 담당</p>
-                                   <br><br>
-                                   <p>3. 광산구시설관리공단</p>
-                                   <p><a href="https://gsfmc.or.kr">홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 유지보수 및 기능고도화 등의 업무 담당</p>
-                                   <br><br>
-                                   <p>4. 강동구도시관리공단</p>
-                                   <p><a href="https://sugang.igangdong.or.kr/">홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
-                                   <br><br>
-                                   <p>5. 광주북구시설관리공단</p>
-                                   <p><a href="https://rsve.gbfmc.or.kr:444/">홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
-                                   <p>6. 송파구체육문화회관</p>
-                                   <p><a href="https://www.esongpa.or.kr/">홈페이지 링크</p>
-                                   <p>해당 시설관리공단의 회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
+                                   <p>현재 재직 중인 회사에서 유지보수·기능고도화·신규개발을 담당한 공단 회원관리·대관예약 시스템입니다.</p>
+                              </div>
+                              <div class="wow fadeInUp real-work-grid" data-wow-delay="0.3s">
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">중랑구시설관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 유지보수 및 기능고도화</p>
+                                             <a href="https://www.jungnangimc.or.kr/" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">강서구시설관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 유지보수 및 기능고도화</p>
+                                             <a href="https://www.gssi.or.kr/" target="_blank" class="real-work-link">대표 홈페이지 →</a>
+                                             <a href="https://sport.gssi.or.kr/" target="_blank" class="real-work-link">체육시설 홈페이지 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">광산구시설관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 유지보수 및 기능고도화</p>
+                                             <a href="https://gsfmc.or.kr" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">강동구도시관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
+                                             <a href="https://sugang.igangdong.or.kr/" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">광주북구시설관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
+                                             <a href="https://rsve.gbfmc.or.kr:444/" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">송파구체육문화회관</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
+                                             <a href="https://www.esongpa.or.kr/" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
+                                   <div class="real-work-card">
+                                        <div class="real-work-card-header">금천구시설관리공단</div>
+                                        <div class="real-work-card-body">
+                                             <p>회원관리, 대관예약 시스템 신규개발 및 유지보수</p>
+                                             <a href="https://www.stest.gfmc.kr/" target="_blank" class="real-work-link">홈페이지 바로가기 →</a>
+                                        </div>
+                                   </div>
                               </div>
                          </div>
                        
